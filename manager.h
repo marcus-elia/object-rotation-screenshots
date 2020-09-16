@@ -17,6 +17,7 @@ private:
     std::string directory = R"(C:\Users\Marcus\CLionProjects\object-rotation-screenshots\screenshots\)";
     std::string imageNameBase = "rotatedCube";
 public:
+    Manager();
     Manager(int inputTotalNumScreenshots);
 
     Point getCameraLoc() const;

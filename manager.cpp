@@ -1,5 +1,15 @@
 #include "manager.h"
 
+Manager::Manager()
+{
+    cube = Cube({0, 0, -50}, 20, {0,0,1,1}, {1,1,1,1});
+    photographer = ScreenshotTaker(directory, imageNameBase, 10, 0, 30, 40);
+
+    totalNumScreenshots = 10;
+    frameNumber = 0;
+    isDone = false;
+}
+
 Manager::Manager(int inputTotalNumScreenshots)
 {
     cube = Cube({0, 0, -50}, 20, {0,0,1,1}, {1,1,1,1});

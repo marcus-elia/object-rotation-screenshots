@@ -155,7 +155,7 @@ void timer(int dummy)
 /* Main function: GLUT runs as a console application starting at main()  */
 int main(int argc, char** argv)
 {
-    manager = manager(15);
+    manager = Manager(15);
     init();
 
     glutInit(&argc, argv);          // Initialize GLUT
