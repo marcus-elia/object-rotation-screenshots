@@ -22,11 +22,11 @@ Manager::Manager(int inputTotalNumScreenshots)
 
 Point Manager::getCameraLoc() const
 {
-    return {0, 0, 0};
+    return {0, 10, 0};
 }
 Point Manager::getCameraLook() const
 {
-    return {0, 0, -1};
+    return {0, 0, -50};
 }
 Point Manager::getCameraUp() const
 {
@@ -39,10 +39,13 @@ bool Manager::getIsDone() const
 
 void Manager::tick()
 {
-    photographer.takeScreenShot();
-    cube.rotate(0, 0.2, 0);
+    if(frameNumber >= delay)
+    {
+        photographer.takeScreenShot();
+        cube.rotate(0, 0.2, 0);
+    }
     frameNumber++;
-    if(frameNumber == totalNumScreenshots)
+    if(frameNumber == totalNumScreenshots + delay)
     {
         isDone = true;
     }

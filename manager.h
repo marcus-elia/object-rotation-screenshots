@@ -13,8 +13,9 @@ private:
     int frameNumber;
     int totalNumScreenshots;
     bool isDone;
+    int delay = 30; // wait 30 frames to start so everything loads
 
-    std::string directory = R"(C:\Users\Marcus\CLionProjects\object-rotation-screenshots\screenshots\)";
+    std::string directory = R"(C:\Users\Marcus\CLionProjects\object-rotation-screenshots\images\)";
     std::string imageNameBase = "rotatedCube";
 public:
     Manager();
